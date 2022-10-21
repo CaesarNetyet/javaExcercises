@@ -9,18 +9,18 @@ public class App {
         a.insertarLetra('a');
         a.insertarLetra('B');
         a.insertarLetra('C');
-        a.insertarLetra('A');
-        a.insertarLetra('A');
+        a.insertarLetra('z');
+        a.insertarLetra('Z');
         a.insertarLetra('b');
         a.insertarLetra('B');
+        
         a.eliminarLetra('A');
         a.eliminarLetra('B');
         a.eliminarLetra('C');
-        a.modificarLetra('b', 'C');
         a.mostrarAbecedario();
-        
-      
-        
+        a.insertarLetra('?');
+        a.insertarLetra('>');
+        a.modificarLetra('b', 'C');
 
     }
 }

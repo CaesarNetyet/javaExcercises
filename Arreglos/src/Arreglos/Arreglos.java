@@ -36,21 +36,22 @@ public class Arreglos {
         n++;
     }
 
-    public void eliminarLetra(char letra) {
+    public char eliminarLetra(char letra) {
         i = encontrarLetra(letra);
-        if (i == -1) return;
+        if (i == -1) return '$';
+        char aux = alfabeto[i];
         for(j = i; j<n-1; j++){
             alfabeto[j] = alfabeto[j+1];
         }
         n--;
+        return aux;
     }
 
     public void modificarLetra(char letraCambiar, char letraNueva) {
-        int x = encontrarLetra(letraCambiar);
-        if (x == -1) return;
-        eliminarLetra(letraCambiar);
-        insertarLetra(letraNueva);  
-        mostrarLetra(letraNueva);
+        i = encontrarLetra(letraCambiar);
+        if (i == -1) return;
+        alfabeto[i] = letraNueva;
+        System.out.println("La letra " + letraCambiar + " En la posicion " + i +  " fue cambiada por " + letraNueva);
     }
 
     public void mostrarLetra(char letra) {
